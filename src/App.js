@@ -6,7 +6,6 @@ class App extends Component {
     count: 0
   }
   increment = (e) => {
-    console.log('here');
     this.setState({
       count: this.state.count + 1
     })
@@ -24,7 +23,7 @@ class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({
-      count: e.target.customNumber.value
+      count: parseInt(e.target.customNumber.value)
     })
     e.target.customNumber.value = ''
   }
